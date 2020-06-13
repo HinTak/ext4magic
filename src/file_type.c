@@ -7698,7 +7698,7 @@ void get_file_property(struct found_data_t* this){
 	
 		case 0x0104     :               //octet-stream
 	//              this->func = file_octet-stream;
-		strncat(this->name,".unknown",8);
+		strncat(this->name,".unknown",9);
 		break;
 	
 		case 0x0105     :               //ogg
@@ -8297,7 +8297,7 @@ void get_file_property(struct found_data_t* this){
 	
 		case 0x0313     :               //x-unknown
 	//              this->func = file_x-unknown ;
-	              strncat(this->name,".unknown",8);
+	              strncat(this->name,".unknown",9);
 		break;
 	
 		case 0x0314     :               //x-xcursor
@@ -8653,7 +8653,7 @@ void get_file_property(struct found_data_t* this){
 	
 		case 0x0711     :               //x-unknown
 	//              this->func = file_x-unknown ;
-	              strncat(this->name,".unknown",8);
+	              strncat(this->name,".unknown",9);
 		break;
 
 		case 0x0712     :               //x-ms-asf
