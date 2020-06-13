@@ -741,10 +741,10 @@ if ((mode && magicscan) || disaster){
 		}
 		magicfile = malloc(64);
 		memset(magicfile,0,64);
-		strncpy (magicfile,"/usr/share/misc/ext4magic",25); 
+		strncpy (magicfile,"/usr/share/misc/ext4magic",26);
 		retval = stat (magicfile, &filestat);
 		if (retval){ 
-			strncpy (magicfile,"/usr/local/share/misc/ext4magic",31); 
+			strncpy (magicfile,"/usr/local/share/misc/ext4magic",32);
 			retval = stat (magicfile, &filestat);
 		}
 		if ((! retval) && (S_ISREG(filestat.st_mode) && (! access(magicfile,R_OK)))) {
