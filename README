@@ -159,14 +159,14 @@ cache and not from the disk. So ext4magic reads wrong blocks from the cached Jou
 
 
 Workaround : ext4magic supports external journal. 
-You can create a copy of the filesystem journal with the "debug2fs" command. 
+You can create a copy of the filesystem journal with the "debugfs" command.
 Use this copy as external Journal for the mounted file system.
 But, if mounted readwrite, here also only the first backup will work good,
-after read the journal by debug2fs, the journal is also buffered and the next
-read by debug2fs results also a bad journal copy.
+after read the journal by debugfs, the journal is also buffered and the next
+read by debugfs results also a bad journal copy.
 
 
-  # debug2fs  -R  "dump <8> /path/to/journalbackup" /dev/sda1
+  # debugfs  -R  "dump <8> /path/to/journalbackup" /dev/sda1
 
 you can use this copy of journal  
 
